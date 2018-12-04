@@ -78,3 +78,13 @@ resource "heroku_pipeline_coupling" "staging" {
   pipeline = "${heroku_pipeline.pipeline.id}"
   stage    = "staging"
 }
+
+output "app_id" {
+  value = "${heroku_app.production.id}"
+}
+output "app_name" {
+  value = "${heroku_app.production.name}"
+}
+output "web_url" {
+  value = "${heroku_app.production.web_url}"
+}

@@ -80,7 +80,7 @@ resource "heroku_pipeline_coupling" "staging" {
 }
 
 output "app_id" {
-  value = "${heroku_app.production.id}"
+  value = "${heroku_app.production.uuid}"
 }
 output "app_name" {
   value = "${heroku_app.production.name}"
